@@ -1,5 +1,6 @@
-# checks user enter yes (y) or no (no)
+import random
 
+# checks user enter yes (y) or no (no)
 def yes_no(question):
     while True:
 
@@ -12,6 +13,7 @@ def yes_no(question):
             return "no"
         else:
             print("please enter yes / no")
+            
+print("How many rounds do you want?")
+response = 5
 
-def instruction():
-    print("Choose how many rounds you want.")
