@@ -1,19 +1,24 @@
 import random
 
-# checks user enter yes (y) or no (no)
-def yes_no(question):
+# checks for an integer more than 0 (allows <enter>)
+def int_checker(question):
     while True:
+        error = " Please enter an integer that is 1 or more."
 
-        response = input(question).lower()
+        to_check = input(question)
 
-        # check the user says yes/no / y / n
-        if response == "yes" or response == "y":
-            return "yes"
-        elif response == "no" or response == "n":
-            return "no"
-        else:
-            print("please enter yes / no")
-            
-print("How many rounds do you want?")
-response = 5
+        # check for infinte mode
+        if to_check == "":
+            return "infinite"
 
+        try:
+            response = int(to_check)
+
+            # checks that the number is more than / equal to 1
+            if response < 1:
+                print(error)
+            else:
+                return response
+
+        except ValueError:
+            print(error)
