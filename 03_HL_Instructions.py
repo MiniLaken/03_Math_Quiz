@@ -22,3 +22,64 @@ def int_checker(question):
 
         except ValueError:
             print(error)
+
+# Check that users have entered a valid
+# option based on a list
+def string_checker(question, valid_ans):
+    while True:
+
+        # Get  user response and make sure it's lowercase
+        user_response =input(question) . lower()
+
+
+        for item in valid_ans:
+            # check if the user response is a word in the list
+            if item == user_response:
+                return item
+            
+# Main routine start here
+
+# Intialise game variables
+mode = "regular"
+
+rounds_player = 0
+rounds_right = 0
+rounds_wrong = 0
+
+print("Round 1 / Round 2 / Round 3")
+            
+# ask user if they want to see the instruction and display
+# them if requested
+want_instruction = string_checker("Do you want to read the instruction? ", ('yes', 'no'))
+
+# checks user enter yes (y) or no(n)
+if want_instruction == "yes":
+    print("instructions go here")      
+
+ # Ask user for number of rounds / infinite mode
+num_rounds = int_checker("How many rounds would you like? Push <enter> for infinite mode: ")
+
+if num_rounds == "infinite":
+    mode = "infinite"
+    num_rounds = 3
+
+
+    
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
