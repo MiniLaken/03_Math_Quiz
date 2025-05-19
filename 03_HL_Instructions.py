@@ -63,6 +63,31 @@ if num_rounds == "infinite":
     mode = "infinite"
     num_rounds = 3
 
+# Game loop starts here
+while rounds_player < num_rounds:
+
+    # Rounds headings (based on mode)
+    if mode == "infinite":
+        rounds_heading = f"\n Round {rounds_player + 1} (Infinite Mode) "
+        num_rounds += 1
+    else:
+        rounds_heading = f"\n💿💿💿 Round {rounds_player + 1} of {num_rounds}💿💿💿"
+
+    print(rounds_heading)
+
+# randomly choose from math quiz list(excluding the exit code)
+ 
+
+    
+    # get user choice
+    user_choice = string_checker("Choose...:",)
+    # print("you chose", user_choice)
+
+    # If user choice is the exit code , break the loop
+    if user_choice == "xxx":
+        break
+
+
 
     
 
@@ -76,10 +101,6 @@ if num_rounds == "infinite":
 
 
  
-
-
-
-
 
 
 
