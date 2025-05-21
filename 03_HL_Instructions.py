@@ -75,12 +75,8 @@ while rounds_player < num_rounds:
 
     print(rounds_heading)
 
-# randomly choose from math quiz list(excluding the exit code)
- 
-
-    
     # get user choice
-    user_choice = string_checker("Choose...:",)
+    user_choice = int_checker("Choose...:",1-10)
     # print("you chose", user_choice)
 
     # If user choice is the exit code , break the loop
@@ -88,6 +84,7 @@ while rounds_player < num_rounds:
         break
 
 
+      
 
     
 
