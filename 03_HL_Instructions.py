@@ -14,7 +14,7 @@ def int_checker(question):
         try:
             response = int(to_check)
 
-            # checks that the number is more than / equal to 1
+            # checks that the number is more than / equal to 13
             if response < 1:
                 print(error)
             else:
@@ -66,6 +66,7 @@ if num_rounds == "infinite":
 # Game loop starts here
 while rounds_player < num_rounds:
 
+
     # Rounds headings (based on mode)
     if mode == "infinite":
         rounds_heading = f"\n Round {rounds_player + 1} (Infinite Mode) "
@@ -76,13 +77,38 @@ while rounds_player < num_rounds:
     print(rounds_heading)
 
     # get user choice
-    user_choice = int_checker("Choose...:",1-10)
+    user_choice = int_checker("How many numbers do you want?: ")
     # print("you chose", user_choice)
 
     # If user choice is the exit code , break the loop
     if user_choice == "xxx":
         break
 
+def initial_points(which_player):
+    
+    double_user = "no"
+    # Ask the questions for the user and note if they got a double
+    num_one = random.randint(1, 10)
+    num_two = random.randint(1, 10)
+
+    total = num_one + num_two
+
+    if num_one == num_two:
+            double_user = "yes"
+
+    print(f"{which_player} rolled a {num_one} and a {num_two} total: {total}")
+
+    return total, double_user
+
+
+
+
+
+
+    
+
+
+  
 
       
 
